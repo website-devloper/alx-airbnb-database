@@ -1,4 +1,4 @@
--- Initial query: fetch all booking info with user, property, and payment details
+Initial query: fetch all booking info with user, property, and payment details
 SELECT 
     b.booking_id,
     b.check_in,
@@ -18,6 +18,7 @@ FROM booking b
 JOIN user u ON b.user_id = u.user_id
 JOIN property p ON b.property_id = p.property_id
 LEFT JOIN payment pay ON b.booking_id = pay.booking_id;
+
 
 
 
