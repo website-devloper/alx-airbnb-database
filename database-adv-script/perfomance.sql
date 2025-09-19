@@ -1,4 +1,4 @@
-Initial query: fetch all booking info with user, property, and payment details
+-- Initial query with a WHERE clause for performance testing
 SELECT 
     b.booking_id,
     b.check_in,
@@ -17,7 +17,9 @@ SELECT
 FROM booking b
 JOIN user u ON b.user_id = u.user_id
 JOIN property p ON b.property_id = p.property_id
-LEFT JOIN payment pay ON b.booking_id = pay.booking_id;
+LEFT JOIN payment pay ON b.booking_id = pay.booking_id
+WHERE b.check_in >= '2025-10-01'
+AND p.location = 'Paris';
 
 
 
