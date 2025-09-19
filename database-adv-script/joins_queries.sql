@@ -80,6 +80,6 @@ CREATE TABLE Message (
 
 SELECT u.last_name, b.booking_id FROM  booking b INNER JOIN user u ON b.user_id = u.user_id; 
 
-SELECT p.property_id, r.comment FROM review r LEFT JOIN property p ON r.property_id; 
+SELECT p.property_id, r.comment FROM review r LEFT JOIN property p ON r.property_id order by r.comment desc; 
 
 SELECT u.user_id, b.booking_id FROM booking b JOIN user u ON b.booking_id;
